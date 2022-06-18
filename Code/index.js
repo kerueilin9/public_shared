@@ -24,7 +24,11 @@ app.get("/index", (req,res)=>{
 
 		"Mode" : req.query.Mode,
 
-		"Sync" : req.query.sync
+		"Sync" : req.query.sync,
+
+		"Time" : req.query.Time,
+
+		"Time_mode" : req.query.Timing
 	}
 	if(req.query.Mode == "yes"){
 		if (mode != "Detect.html"){
@@ -59,6 +63,14 @@ app.get("/index", (req,res)=>{
 			Mode_Shine_Mutex(req.query.Num);
 		} else {
 			Mode_Shine_Semaphore(req.query.Num);
+		}
+	}
+	else if(req.query.Time != null)
+	{
+		if (req.query.Timing == "on"){
+			Time_mode_on(req.query.Time);
+		} else {
+			Time_mode_off(req.query.Time);
 		}
 	}
 	else if(req.query.radio != null)
@@ -98,6 +110,26 @@ function Mode_Shine_Mutex(TIMES)
 }
 
 function Mode_Shine_Semaphore(TIMES)
+{
+	let process = child_process.execFile('sudo',[
+		"./Lab6-2/Lab6_2", "semaphore", TIMES
+	]);
+	process.stdout.on('data', (data) => {
+		console.log(`stdout ${data}`);
+	})
+}
+
+function Time_mode_on(TIMES)
+{
+	let process = child_process.execFile('sudo',[
+		"./Lab6-2/Lab6_2", "semaphore", TIMES
+	]);
+	process.stdout.on('data', (data) => {
+		console.log(`stdout ${data}`);
+	})
+}
+
+function Time_mode_off(TIMES)
 {
 	let process = child_process.execFile('sudo',[
 		"./Lab6-2/Lab6_2", "semaphore", TIMES

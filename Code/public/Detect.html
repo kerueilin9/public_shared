@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Lab5_2_Nodejs</title>  
+        <link rel="stylesheet" href="./index.css">
+        <!-- <style>
+            h1,h2{
+                text-align: center;
+                margin: 5px;
+            }
+            body {
+                padding: 0px;
+                margin: 0px;
+                background-color: rgb(222, 222, 222);
+            }
+            .head {
+                height: 30px;
+                background-color: rgb(147, 217, 253);
+            }
+            .mid {
+                padding: 20px;
+                background-color: rgb(240, 240, 240);
+                border-radius: 20px;
+                width: 30%;
+                margin: 20px auto;
+                min-width: 500px;
+            }
+            label {
+                margin-right : 20px;
+            }
+            input {
+                margin-right : 41px;
+                vertical-align: middle;
+            }
+            .st{
+                font-size: 20px;
+            }
+            span {
+                float: left;
+            }
+            form {
+                position:relative;
+            }
+            #Submit {
+                position:absolute;
+                margin: 0px;
+                padding: 0px;
+                right: 15px;
+                bottom: 15px;
+                vertical-align: middle;
+                height: 30px;
+                width: 50px;
+            }
+            form {
+                background-color: rgb(202, 202, 202);
+                padding: 10px;
+                border-radius: 10px;
+                position: relative;
+            }
+        </style> -->
+    </head>
+    <body>
+        <Div class="head"></Div>
+        <Div class = "mid">
+            <h1>Lab5_2_Nodejs</h1>
+            <hr/>
+            <p id = "temp1">請選擇模式</p>
+            <p id = "response"></p>
+            <h2>Mode Switch</h2>
+            <form method="get" action="/index">
+                <span>
+                    <label for="yes">DETECT</label>
+                    <br>
+                    <label for="on">NO_DETECT</label>
+                </span>
+                <input type="radio" id="yes" name="Mode" value="yes">
+                <br>
+                <input type="radio" id="no" name="Mode" value="no">
+                <input id="Submit" type="submit" value="Submit">
+            </form>
+        </Div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="detect.js"></script>
+    </body>
+</html>

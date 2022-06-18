@@ -1,0 +1,1 @@
+cmd_/home/nvidia/Desktop/Code/Lab6-2/demo.ko := aarch64-linux-gnu-ld -r  -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds --build-id  -o /home/nvidia/Desktop/Code/Lab6-2/demo.ko /home/nvidia/Desktop/Code/Lab6-2/demo.o /home/nvidia/Desktop/Code/Lab6-2/demo.mod.o ;  true

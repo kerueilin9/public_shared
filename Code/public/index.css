@@ -1,0 +1,57 @@
+h1,h2{
+    text-align: center;
+    margin: 13px 5px 5px 5px;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(222, 222, 222);
+}
+.head {
+    height: 30px;
+    background-color: rgb(147, 217, 253);
+}
+.mid {
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    width: 30%;
+    margin: 20px auto;
+    min-width: 500px;
+}
+label {
+    margin-right : 20px;
+}
+input {
+    margin-right : 41px;
+}
+.st{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+span {
+    float: left;
+}
+form {
+    background-color: rgb(202, 202, 202);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+#Submit, #Submit2, #Submit3 {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+    width: 100px;
+}
+.first {
+    margin-top: 15px;
+    background-color: rgb(202, 202, 202);
+    padding: 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
